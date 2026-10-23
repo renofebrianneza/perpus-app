@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Loan extends Model
 {
-    use HasFactory;
-
     protected $fillable = [
         'book_id',
         'member_id',
@@ -16,6 +14,8 @@ class Loan extends Model
         'tanggal_kembali_rencana',
         'status',
     ];
+
+    use HasFactory;
 
     public function book()
     {
